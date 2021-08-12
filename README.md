@@ -3,7 +3,6 @@
 # FUNDAMENTOS DE PROGRAMACIÓN
 
 - Lugar: UNIVERSIDAD CONTINENTAL
-- Sede: LIMA - LOS OLIVOS
 - Horario: JUEVES DE 20:15 a 10:30 Horas
 - Inicio: 16-AGOSTO-2021
 
@@ -11,7 +10,7 @@
 
 - Docente: Eric Gustavo Coronel Castillo
 - Blog: www.desarrollasoftware.com
-- Canal Youtube: https://www.youtube.com/DesarrollaSoftware
+- Canal Youtube: www.youtube.com/DesarrollaSoftware
 - Correo: ecoronel@continental.edu.pe
 
 
