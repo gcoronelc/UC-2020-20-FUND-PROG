@@ -14,7 +14,7 @@
 - Correo: ecoronel@continental.edu.pe
 
 
-# VIDEOS RECOMENDADOS
+# VIDEOS RECOMENDADOS en YOUTUBE
 
 ## Videos Propios
 
