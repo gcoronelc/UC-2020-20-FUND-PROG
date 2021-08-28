@@ -1,3 +1,4 @@
+// Calcular el factorial de un numero
 Algoritmo Ejemplo03
 	// Variables
 	Definir valorEntero, factorial Como Entero;
@@ -11,5 +12,4 @@ Algoritmo Ejemplo03
 	Fin Para
 	// Reporte
 	Escribir "Factorial de ", valorEntero, " es ", factorial;
-	Escribir contador;
 FinAlgoritmo
