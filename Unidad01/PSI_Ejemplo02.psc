@@ -1,3 +1,6 @@
+// Determinar si 2 numeros son iguales.
+// o el mayor de los dos.
+
 Proceso Programa01
 	// Variables
 	Definir a, b como Entero;
