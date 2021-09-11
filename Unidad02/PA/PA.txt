@@ -1,0 +1,42 @@
+﻿PROBLEMA 1
+==================================================
+
+MENU PRINCIPAL
+=============================================
+1.- Registrar Ventas
+2.- Reporte
+3.- Salir
+
+
+
+OPCION 1
+------------------------------
+
+PRODUCTO
+---------------
+1.- TV
+2.- CELULAR
+3.- EQUIPO
+
+OPCION: 1
+
+Cantidad: 10
+
+REPORTE DE LA VENTA
+------------------------------------
+Importe: 35000.00
+Descuento: 3500.00
+Total a pagar: 31500.00
+
+
+
+
+OPCION 2
+-----------------------------------
+a. La cantidad de pedidos que se vendio el producto TV: 
+b. La cantidad de clientes atendidos (solo si se completó todo el pedido): 
+c. La cantidad de descuentos otorgados en Celulares: 
+d. El total de unidades vendido de cada producto: 
+e. El stock de unidades que queda de cada producto: 
+f. El monto total vendido de cada producto: 
+

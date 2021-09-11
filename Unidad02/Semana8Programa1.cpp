@@ -1,3 +1,18 @@
+/*
+Se tiene un inventario inicial, y se debe ingresar datos de cliente y datos de
+producto, ademas de la cantidad pedida.
+
+Reportar:
+- La cantidad de hombres y la cantidad de mujeres con o sin atencion de pedido completo.
+- La cantidad total de clientes atendidos (solo si se completo todo el pedido)
+- La cantidad total de clientes no atendidos (no se completo pedido).
+- El stock de unidades que queda del producto.
+- El total acumulado vendido del producto.
+- El total acumulado vendido para cliente de genero mujer.
+- El total acumulado vendido para cliente de genero hombre.
+
+*/
+
 #include<iostream>
 using namespace std;
 

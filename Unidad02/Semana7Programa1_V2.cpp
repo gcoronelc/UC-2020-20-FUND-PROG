@@ -72,42 +72,37 @@ int main()
 				sumNotas = sumNotas + nota;
 				switch(gen){  
 					case 'm': case 'M': 
+						// Contador de masculinos
 						cantMasc++;
-						switch(estado){  
-							case 'c': case 'C': 
-								cantMascCas++;
-								if(nota>=11)
-									cantMascCasApr++;
-								else
-									cantMascCasDesap++;
-		 						break;
-							case 's': case 'S':
-								cantMascSolt++;
-								if(nota>=11)
-									cantMascSoltApr++;
-								else
-									cantMascSoltDesap++;
-	 							break;
-						}
+						// Contador de masculinos casados
+						cantMascCas += (estado=='c' || estado=='C')?1:0;
+						// Contador de masculinos casados aprobados
+						cantMascCasApr += ( (estado=='c' || estado=='C') && nota >= 11 )?1:0;
+						// Contador de masculinos casados desaprobados
+						cantMascCasDesap += ( (estado=='c' || estado=='C') && nota < 11 )?1:0;
+						// Contador de masculinos solteros
+						cantMascSolt += (estado=='s' || estado=='S')?1:0;
+						// Contador de masculinos solteros aprobados
+						cantMascSoltApr += ( (estado=='s' || estado=='S') && nota >= 11 )?1:0;
+						// Contador de masculinos solteros desaprobados
+						cantMascSoltDesap += ( (estado=='s' || estado=='S') && nota < 11 )?1:0;
 						break;
+						
 					case 'f': case 'F':
+						// Cantidad de mujeres
 						cantFem++;
-						switch(estado) {  
-							case 'c': case 'C': 
-								cantFemCas++;
-								if(nota>=11)
-										cantFemCasApr++;
-								else
-										cantFemCasDesap++;
-								break;
-							case 's': case 'S':
-								cantFemSolt++;
-								if(nota>=11)
-									cantFemSoltApr++;
-								else
-									cantFemSoltDesap++;
-								break;
-						}
+						// Contador de mujeres casadas
+						cantFemCas += (estado=='c' || estado=='C')?1:0;
+						// Contador de mujeres casadas aprobadas
+						cantFemCasApr += ( (estado=='c' || estado=='C') && nota >= 11 )?1:0;
+						// Contador de mujeres casadas desaprobadas
+						cantFemCasDesap += ( (estado=='c' || estado=='C') && nota < 11 )?1:0;
+						// Contador de mujeres solteras
+						cantFemSolt += (estado=='s' || estado=='S')?1:0;
+						// Contador de mujeres solteras aprobadas
+						cantFemSoltApr += ( (estado=='s' || estado=='S') && nota >= 11 )?1:0;
+						// Contador de mujeres solteras desaprobadas
+						cantFemSoltDesap += ( (estado=='s' || estado=='S') && nota < 11 )?1:0;
 						break;
 				}
 				break;
