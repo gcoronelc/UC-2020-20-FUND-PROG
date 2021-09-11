@@ -11,6 +11,7 @@ int main(){
 	int paquete, cantidad;
 	double importe, precioUnitario, porcDescuento, descuento;
 	double baseImponible, impuesto, total;
+	double ventasPaquete1 = 0, ventasPaquete2 = 0, ventasPaquete3 = 0;
 	
 	// Control del menú
 	do{
@@ -72,6 +73,10 @@ int main(){
 				total = importe - descuento;
 				baseImponible = total / 1.18;
 				impuesto = total - baseImponible;
+				// Calculos estadisticos
+				ventasPaquete1 += (paquete==1)?total:0;
+				ventasPaquete2 += (paquete==2)?total:0;
+				ventasPaquete3 += (paquete==3)?total:0;
 				// Reporte Venta
 				cout << endl;
 				cout << "REPORTE DE VENTA" << endl;
@@ -83,10 +88,14 @@ int main(){
 				cout << "Total: " << total << endl;			
 				break;
 			case 2:
-				cout << "Opcion 2" << endl;
+				cout << "REPORTE TOTAL DE VENTAS" << endl;
+				cout << "-------------------------------" << endl;
+				cout << "Punta Cana: " << ventasPaquete1 << endl;
+				cout << "San Andrés: " << ventasPaquete2 << endl;
+				cout << "Cancún: " << ventasPaquete3 << endl;
 				break;
 			case 3:
-				cout << "Opcion 3" << endl;
+				cout << "Nos vemos otro día." << endl;
 				break;														
 		}
 		
