@@ -4,18 +4,14 @@ using namespace std;
 float leedatof()
 {
 	float dato;
-	
-	cin>>dato;
-	
+	cin >> dato;
 	return dato;	
 }
 
 int leedatoe()
 {
 	int dato;
-	
 	cin>>dato;
-	
 	return dato;	
 }
 
@@ -27,7 +23,6 @@ void herencia()
 	do{
 		cout << "Ingresar importe de herencia:\t";
 		her = leedatof();
-
 		if (her <=0)
 			cout << "ERROR.La herencia debe ser mayor a 0";
 	} while (her <=0);
@@ -35,10 +30,8 @@ void herencia()
 	do{
 		cout << "Ingresar cantidad de hijos:\t";
 		cant = leedatoe();
-		
 		if (cant <= 0)
 			cout << "ERROR.La cantidad debe ser mayor a 0";
-
 	} while (cant <= 0);
 
 	if (cant < 4)

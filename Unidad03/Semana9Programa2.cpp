@@ -4,11 +4,10 @@ using namespace std;
 void sumar(int a, int b)
 {  
 	int c;
-
+	// Proceso
 	c = a + b;
-
+	// Reporte
 	cout<<c;
-
 }
 
 int main()
@@ -24,7 +23,7 @@ int main()
 	sumar(a,b);
 
 	return 0;
-} 
+}
 
 
 
