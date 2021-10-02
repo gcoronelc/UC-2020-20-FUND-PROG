@@ -8,12 +8,16 @@ INTEGRANTES:
 */
 
 #include <iostream>
+#include <sstream> 
 #include "LecturaDatosV2.h"
 #include "ConvierteDatos.h"
 using namespace std;
 
 // Variables globales
-int contVentas=0;
+int contVentas=0, contVentasCatA=0, contVentasCatB=0, contVentasCatC=0;
+int cantTotal=0, cantTotalCatA=0, cantTotalCatB=0, cantTotalCatC=0;
+double sumaImporte=0, sumaImporteCatA=0, sumaImporteCatB=0, sumaImporteCatC=0;
+stringstream listado;
 
 int leerCategoria(){
 	char categoria;
@@ -82,18 +86,49 @@ void procProcesarVenta(){
 	cout << "Importe de la venta: " << importeVenta << endl;
 	cout << "Porcentaje de comisión: " << porcComision*100 << "%" << endl;
 	cout << "Importe de comisión: " << importeComision << endl;
+	// Contadores
+	contVentasCatA += (categoria=='A')?1:0;
+	contVentasCatB += (categoria=='B')?1:0;
+	contVentasCatC += (categoria=='C')?1:0;
+	contVentas++;
+	// Sumatoria de cantidades
+	cantTotalCatA += (categoria=='A')?cantidad:0;
+	cantTotalCatB += (categoria=='B')?cantidad:0;
+	cantTotalCatC += (categoria=='C')?cantidad:0;
+	cantTotal += cantidad;
+	// Sumatoria de importes
+	sumaImporteCatA += (categoria=='A')?importeVenta:0;
+	sumaImporteCatB += (categoria=='B')?importeVenta:0;
+	sumaImporteCatC += (categoria=='C')?importeVenta:0;
+	sumaImporte += importeVenta;
+	// Agregando fila al listado
+	listado << contVentas << "\t" << categoria;
+	listado << "\t" << precio << "\t";
+	listado << cantidad << "\t" << importeVenta;
+	listado << "\t" << importeComision << endl;
 }
 
 // Listado
 void procListado(){
-	cout << "Listado de ventas." << endl;
-	cout << "Pronto..." << endl;
+	cout << "LISTADO" << endl;
+	cout << "======================================================================" << endl;
+	cout << "Nro.\tCate.\tPrecio\t" << endl;
+	cout << "======================================================================" << endl;
+	cout << listado.str();
+	cout << "======================================================================" << endl;
 }
 
 // Resumen
 void procResumen(){
-	cout << "Resumen de ventas." << endl;
-	cout << "Pronto..." << endl;
+	cout << "RESUMEN DE VENTAS" << endl;
+	cout << "======================================================================" << endl;
+	cout << "Cate.\tVentas\tCant.\tImporte" << endl;
+	cout << "======================================================================" << endl;
+	cout << " A\t" << contVentasCatA << "\t" << cantTotalCatA << "\t" << sumaImporteCatA << endl;
+	cout << " B\t" << contVentasCatB << "\t" << cantTotalCatB << "\t" << sumaImporteCatB << endl;
+	cout << " C\t" << contVentasCatC << "\t" << cantTotalCatC << "\t" << sumaImporteCatC << endl;
+	cout << "======================================================================" << endl;
+	cout << " Total\t" << contVentas << "\t" << cantTotal << "\t" << sumaImporte << endl;
 }
 
 // Salir
